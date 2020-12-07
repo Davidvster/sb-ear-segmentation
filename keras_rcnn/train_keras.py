@@ -95,7 +95,7 @@ if __name__ == '__main__':
     model = MaskRCNN(mode='training', model_dir='./', config=config)
     # load weights (mscoco) and exclude the output layers
     # When starting, load the mask_rcnn_coco5 pretrained model since it can speed up the initial process
-    model.load_weights('mask_rcnn_coco5.h5', by_name=True, exclude=["mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
+    model.load_weights('mask_rcnn_coco.h5', by_name=True, exclude=["mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
     # When we already have our own model, we can continue training it
     # model.load_weights('mask_rcnn_ear_cfg_0011.h5', by_name=True)
     # train weights (output layers or 'heads')
